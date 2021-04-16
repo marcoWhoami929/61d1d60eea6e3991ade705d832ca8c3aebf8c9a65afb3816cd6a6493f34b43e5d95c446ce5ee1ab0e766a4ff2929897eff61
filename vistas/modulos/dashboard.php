@@ -92,7 +92,9 @@ $boletosGanados = ControladorFunciones::ctrMostrarBoletosObtenidos($idParticipan
                   <div class="container">
                     <div class="row" id="contenedorBoletos">
                       <?php 
-                        for ($i=0; $i <count($boletosGanados); $i++) { 
+                      if(count($boletosGanados) > 0){
+
+                           for ($i=0; $i <count($boletosGanados); $i++) { 
                           $numero = $i+1;
                           echo "<div class='col-lg-6 col-md-6 col-sm-12'>
                           <div class='ticket'>
@@ -111,6 +113,14 @@ $boletosGanados = ControladorFunciones::ctrMostrarBoletosObtenidos($idParticipan
                           </div>";
                           
                         }
+
+                      }else{
+
+                        echo "<strong>AUN NO TIENES BOLETOS PARA PARTICIPAR</strong>";
+
+
+                      }
+                     
                         ?>
                     </div>
                     

@@ -20,6 +20,25 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- header content -->
+    <div id="contenedorFacebook" class="desaparecer-facebook">
+        <div class="card h-100">
+                       
+                        <div class="card-block ">
+                    
+                            
+                            <script>(function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+
+                            <div class="fb-page" data-href="https://www.facebook.com/SFDekkerlab/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/SFDekkerlab/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SFDekkerlab/">San Francisco Dekkerlab</a></blockquote></div>
+                                                    
+                        </div>
+                    </div>
+    </div>
 
     <section id="about" class="about-area pb-130 pt-80">
         <div class="container">
@@ -36,7 +55,7 @@
                         </div>
                        
                         <p class="text mt-30">Participa en nuestra gran rifa, que se llevará a cabo el día </p>
-                        <p class="date"><span>3<sup></sup></span> Mayo 2021</p>
+                        <p class="date"><span>3<sup></sup></span> Mayo del 2021</p>
                     </div> <!-- about content -->
                 </div>
             </div> <!-- row -->
@@ -64,6 +83,7 @@
                         <div class="features-content">
                             <h4 class="features-title"><a href="#">Registra tu compra</a></h4>
                             <p class="text"></p>
+                            <strong>Solo compras de contado</strong>
                         </div>
                     </div> <!-- single features -->
                 </div>
@@ -117,13 +137,16 @@
                             
                         </div>
                         <div class="pricing-price1">
-                          
+                          <p class="text" style="color:rgba(24, 99, 255, 1)">Con un valor de</p>
+                          <span style="color:rgba(24, 99, 255, 1)">$ 17,000.00</span>
+                            
                         </div>
                          <div class="pricing-list">
                             <ul>
-                                <li>PISTOLA DE GRAVEDAD GONI 324 HVLP CON MANÓMETRO</li>
+                                <li>PISTOLA SAGOLA 4600 XTREME</li>
                                
                             </ul>
+                            
                         </div>
                        
                         
@@ -137,11 +160,12 @@
                         </div>
                        
                          <div class="pricing-price2">
-                          
+                          <p class="text" style="color:rgba(24, 99, 255, 1)">Con un valor de</p>
+                          <span style="color:rgba(24, 99, 255, 1)">$ 0.00</span>
                         </div>
                          <div class="pricing-list">
                             <ul>
-                                <li>PISTOLA DE GRAVEDAD 13.5 CFM GONI 321 DE 600 C.C.</li>
+                                <li ></li>
                                
                             </ul>
                         </div>
@@ -155,11 +179,12 @@
                            
                         </div>
                         <div class="pricing-price3">
-                          
+                           <p class="text" style="color:rgba(24, 99, 255, 1)">Con un valor de</p>
+                          <span style="color:rgba(24, 99, 255, 1)">$ 0.00</span>
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                <li>PISTOLA DE GRAVEDAD GONI 621 VASO DE ALUMINIO 1LT</li>
+                                   <li style="text-transform: uppercase;">Lijadora 3m File Belt Sander 28366, 6 Hp Motor, 14-9/16</li>
                                
                             </ul>
                         </div>
@@ -484,7 +509,14 @@
                                         <p class="help-block text-danger"></p>
                                     </div> <!-- single form -->
                                 </div>
-                     
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-check form-check-flat form-check-primary">
+                                  <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" id="aceptarTerminos">
+                                    He leido, y acepto los términos y condiciones especificados en el siguiente enlace. <a href="#" data-toggle='modal' data-target='#modalAviso'>Aviso de Privacidad</a>
+                                  </label>
+                                </div>
+                                </div>
                                 <div class="col-md-12">
                                     <div class="single-form form-group">
                                         <button type="submit" class="main-btn main-btn-2">Enviar</button>
@@ -503,6 +535,170 @@
       <div class="modal-footer">
         <button type="button" class="main-btn main-btn-2" id="btnCerrarRegistro" data-dismiss="modal">Cerrar</button>
 
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalAviso" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="modalEstilo">
+        <h5 class="modal-title" id="exampleModalLabel">AVISO DE PRIVACIDAD</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">
+                De acuerdo a lo previsto en la&nbsp;<strong>“LEY FEDERAL de Protección de Datos Personales”</strong>&nbsp;PINTURAS Y COMPLEMENTOS DE PUEBLA SA DE CV declara ser una empresa legalmente constituida de conformidad con las leyes mexicanas, con domicilio ubicado en, Calle Libertad, 5973. Col. San Baltazar. Puebla,Pue. CP.72550 así como manifestar ser la responsable del tratamiento de sus datos personales.
+                </p>
+                <br>
+                <br>
+                <p class="text-muted">
+                Oficina de privacidad ubicada en: Mismo domicilio.
+                <br>
+                <br>
+                Teléfonos de la oficina de privacidad: 222 2455365
+                <br>
+                <br>
+                Correo electrónico: emartinez@sfd.com.mx
+                <br>
+                <br>
+                <strong>DEFINICIONES:</strong>
+                <br>
+                <br>
+                <strong>Datos personales.-</strong> Cualquier información concerniente a una persona física identificada o identificable.
+                <br>
+                <strong>Titular.-</strong> La persona física (TITULAR) a quien identifica o corresponden los datos personales.
+                <br>
+                <strong>Responsable.-</strong> Persona física o moral de carácter privado que decide sobre el tratamiento de los datos personales.
+                <br>
+                <strong>Tratamiento.-</strong> La obtención, uso (que incluye el acceso, manejo, aprovechamiento, transferencia o disposición de datos personales), divulgación o almacenamiento de datos personales por cualquier medio.
+                <br>
+                <strong>Transferencia.-</strong> Toda comunicación de datos realizada a persona distinta del responsable o encargado del tratamiento.
+                <br>
+                <strong>Derechos ARCO.-</strong> Derechos de acceso, rectificación, cancelación y oposición.
+                <br>
+                <strong>Consentimiento Tácito.-</strong> Se entenderá que el titular ha consentido en el tratamiento de los datos, cuando habiéndose puesto a su disposición el Aviso de Privacidad, no manifieste su oposición.
+                <br>
+                <strong>FINALIDADES PRIMARIAS.-</strong> Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:
+                <br>
+                Fines fiscales, laborales, bancarios y de marketing.
+                <br>
+                <strong>FORMAS DE RECABAR SUS DATOS PERSONALES.-</strong> Para las actividades señaladas en el presente aviso de privacidad, podemos recabar sus datos personales de distintas formas cuando usted nos los proporciona directamente; cuando visita nuestro sitio de Internet o utiliza nuestros servicios en línea, y cuando obtenemos información a través de otras fuentes que están permitidas por la ley.
+                <br>
+                <br>
+                <strong>DATOS PERSONALES QUE SE RECABAN DE FORMA DIRECTA:</strong>
+                <br>
+                <br>
+                Recabamos sus datos personales de forma directa cuando usted mismo nos los proporciona por diversos medios.
+                <br>
+                Tales como:
+                <br>
+                Correo electrónico
+                <br>
+                Nombre completo
+                <br>
+                Género
+                <br>
+                Edad
+                <br>
+                Nacionalidad
+                <br>
+                Estado civil
+                <br>
+                Nombre del cónyuge
+                <br>
+                Teléfono
+                <br>
+                Teléfono móvil
+                <br>
+                Domicilio
+                <br>
+                Fecha y lugar de nacimiento
+                <br>
+                Educación
+                <br>
+                Datos financieros
+                <br>
+                Datos patrimoniales
+                <br>
+                Hijos
+                <br>
+                RFC
+                <br>
+                Número de seguro social
+                <br>
+                CURP
+                <br>
+                <br>
+                <strong>DATOS PERSONALES QUE RECABAMOS CUANDO VISITA NUESTRO SITIO DE INTERNET O UTILIZA NUESTROS SERVICIOS EN LINEA:</strong>
+                <br>
+                <br>
+                Tales como:
+                <br>
+                Correo electrónico
+                <br>
+                Nombre completo
+                <br>
+                Teléfono
+                <br>
+                Teléfono móvil
+                <br>
+                Domicilio
+                <br>
+                <strong>DATOS PERSONALES QUE RECABAMOS A TRAVÉS DE OTRAS FUENTES PERMITIDAS POR LA LEY:</strong>
+                <br>
+                <br>
+                No recabamos sus datos personales de esta forma.
+                <br>
+                <br>
+                <strong>IMÁGENES Y SONIDOS RECABADOS POR CAMARAS DE VIDEO-VIGILANCIA.-</strong> Las imágenes y sonidos que se rebaben por medio de cámaras de Video-Vigilancia serán utilizados para los fines de SEGURIDAD. , tal como se especifica en el Aviso de Privacidad corto para Video-Vigilancia que podrá consultar en el área de Video-Grabación.
+                <br>
+                <strong>USO DE DATOS SENSIBLES.-</strong> Se consideran datos sensibles aquellos afecten a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste.
+                <br>
+                En el presente aviso de privacidad se omite el uso de datos personales considerados como sensibles.
+                <br>
+                <strong>LIMITACIÓN O DIVULGACIÓN DE SUS DATOS PERSONALES.-</strong> El responsable de la información se compromete a realizar únicamente las siguientes acciones, respecto a su información:
+                <br>
+                Realizar llamadas telefónicas, Envío de correos electrónicos.
+                <br>
+                <strong>PROCEDIMIENTO PARA HACER VALER LOS DERECHOS ARCO.-</strong> Usted tiene derecho de acceder a sus datos personales que poseemos y a los detalles del tratamiento de los mismos, así como a rectificarlos en caso de ser inexactos o incompletos; cancelarlos cuando considere que no se requieren para alguna de las finalidades señalados en el presente aviso de privacidad, estén siendo utilizados para finalidades no consentidas o haya finalizado la relación contractual o de servicio, o bien, oponerse al tratamiento de los mismos para fines específicos.
+                <br>
+                Los mecanismos que se han implementado para el ejercicio de dichos derechos, los cuales se conocen como derechos ARCO mismos que se refieren al acceso, rectificación, cancelación y oposición del titular respecto al tratamiento de sus datos personales;
+                <br>
+                <br>
+                <strong>1)</strong> El procedimiento inicia con la presentación de la solicitud respectiva a los derechos Arco, en el domicilio de nuestra Oficina de Privacidad, mismo que fue debidamente señalado al principio del presente aviso de privacidad.
+                <br>
+                <strong>2)</strong>Su solicitud deberá contener la siguiente información:
+                <br>
+                Documentos que acrediten su personalidad e identidad.
+                <br>
+                <strong>3)</strong>El plazo para atender su solicitud es el siguiente: 20 días.
+                <br>
+                <br>
+                <strong>TRANSMISIÓN DE SUS DATOS PERSONALES.-</strong> Sus datos personales no pueden ser transferidos dentro y fuera del país, ni tratados por personas externas a esta empresa.
+                <br>
+                Nos comprometemos a no transferir su información personal a terceros sin su consentimiento, salvo las excepciones previstas en el artículo 37 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, así como a realizar esta transferencia en los términos que fija esa ley.
+                <br>
+                <strong>MODIFICACIONES AL AVISO DE PRIVACIDAD.-</strong> Nos reservamos el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad, para la atención de novedades legislativas, políticas internas o nuevos requerimientos para la prestación u ofrecimiento de nuestros servicios o productos.
+                <br>
+                Por lo que se obliga a mantener actualizado el presente aviso, para su consulta. Esto con el fin de que <strong>“EL TITULAR”</strong> se encuentre en posibilidad de ejercer sus derechos ARCO y de esta forma mantenerlo al tanto de cualquier modificación mediante aviso al último correo electrónico que nos haya proporcionado.
+                <br>
+                <strong>USO DE COOKIES.-</strong> En el presente aviso de privacidad se omitirá el uso de cookies, para recabar información sobres usted.
+                <br>
+                <strong>USO DE WEB BEACONS.-</strong> En el presente aviso de privacidad se omitirá el uso de web beacons, para recabar información sobre usted.
+                <br>
+                Las partes expresan que el presente aviso, se regirá por las disposiciones legales aplicables en el Estado de Puebla en especial, por lo dispuesto en la Ley Federal de Protección de Datos Personales.
+                <br>
+                Si usted considera que su derecho de protección de datos personales ha sido lesionado por alguna conducta de nuestros empleados o de nuestras actuaciones o respuestas, presume que en el tratamiento de sus datos personales existe alguna violación a las disposiciones previstas en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, podrá interponer la queja o denuncia correspondiente ante el IFAI.
+
+                </p>
+                <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="main-btn main-btn-2" data-dismiss="modal">Cerrar</button>
       
       </div>
     </div>

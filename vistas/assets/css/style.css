@@ -1,23 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
-    Template Name: Eventify - Event and Conference Template
-    Template URI: graygrids.com
-    Description: Eventify - Event and Conference Template
-    Author: GrayGrids
-    Author URI: graygrids.com
-    Version: 1.0
-
------------------------------------------------------------------------------------
-
-    CSS INDEX
-    ===================
-
-    01. Theme default CSS
-	02. Header
-    03. Hero
-	04. Footer
-
------------------------------------------------------------------------------------*/
 /*===========================
     1. COMMON css 
 ===========================*/
@@ -1046,7 +1027,7 @@ p {
     color: #777777;
     margin-top: 10px; }
   .single-pricing .pricing-price1 {
-    background-image: url(../images/premio1.jpg);
+    background-image: url(../images/premio1.jpeg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1085,14 +1066,14 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price1:hover {
 
-    background-image: url(../images/premio1.jpg);
+    background-image: url(../images/premio1.jpeg);
 
     opacity: 0.9;
     
   }
 
   .single-pricing .pricing-price2 {
-    background-image: url(../images/premio2.jpg);
+    background-image: url(../images/premio3.jpeg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1131,13 +1112,13 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price2:hover {
 
-    background-image: url(../images/premio2.jpg);
+    background-image: url(../images/premio3.jpeg);
 
     opacity: 0.9;
     
   }
    .single-pricing .pricing-price3 {
-    background-image: url(../images/premio3.jpg);
+    background-image: url(../images/premio4.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1176,7 +1157,7 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price3:hover {
 
-    background-image: url(../images/premio3.jpg);
+    background-image: url(../images/premio4.jpg);
 
     opacity: 0.9;
     
@@ -1441,3 +1422,45 @@ p {
   .back-to-top:hover {
     color: #fff;
     background-position: right center; }
+  .contenedor-facebook{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 2px solid #000000;width: 200px;height: 400px;position: fixed;
+    z-index: 100; 
+    margin-right: 0;
+    margin-left: 75%;
+    margin-top: -650px;
+    display: '';
+  }
+   .desaparecer-facebook{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 2px solid #000000;width: 200px;height: 400px;position: fixed;
+    z-index: 100; 
+    margin-right: 0;
+    margin-left: 75%;
+    margin-top: -650px;
+    display: none;
+  }
+  .spinner {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

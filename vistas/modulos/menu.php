@@ -19,12 +19,7 @@
               <span class="menu-title">Mis Compras</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="miPerfil">
-              <i class="ti-user menu-icon"></i>
-              <span class="menu-title">Mi Perfil</span>
-            </a>
-          </li>
+
            <li class="nav-item">
             <a class="nav-link" href="salir">
               <i class="ti-angle-double-left menu-icon"></i>

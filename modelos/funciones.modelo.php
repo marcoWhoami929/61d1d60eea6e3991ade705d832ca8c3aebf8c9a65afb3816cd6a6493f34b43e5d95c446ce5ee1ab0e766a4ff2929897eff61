@@ -117,7 +117,7 @@ class ModeloFunciones
 	}
 	static public function mdlMostrarCompras($tabla,$idParticipante){
 
-		$stmt = Conexion::conectar()->prepare("SELECT fac.serie,fac.folio,fac.total,fac.fechaFactura FROM $tabla as bol INNER JOIN facturas as fac ON bol.idFactura = fac.id WHERE bol.idParticipante = $idParticipante");
+		$stmt = Conexion::conectar()->prepare("SELECT fac.serie,fac.folio,fac.total,fac.fechaFactura FROM $tabla as bol INNER JOIN facturas as fac ON bol.idFactura = fac.id WHERE bol.idParticipante = $idParticipante GROUP by fac.serie,fac.folio");
 
 		$stmt -> execute();
 
@@ -156,6 +156,109 @@ class ModeloFunciones
 
 		}
 		
+		$stmt-> close();
+
+		$stmt = null;
+
+	}
+	static public function mdlRegistrarCompra($tabla,$serie,$folio){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET elegida = 1 WHERE serie = '$serie' and folio = $folio");
+
+		$stmt ->execute();
+
+		$cuenta = $stmt->rowCount();
+
+		if($cuenta > 0){
+
+			return "ok";
+
+		}else{
+
+			return "error";
+
+		}
+		$stmt-> close();
+
+		$stmt = null;
+
+	}
+	static public function mdlObtenerDatosFactura($tabla,$serie,$folio){
+
+		$stmt = Conexion::conectar()->prepare("SELECT id,total FROM $tabla WHERE serie = '$serie' and folio = $folio");
+
+		$stmt ->execute();
+
+		return $stmt -> fetch();
+
+		$stmt-> close();
+
+		$stmt = null;
+	
+	}
+	static public function mdlObtenerDatosParticipante($tabla,$idParticipante){
+
+		$stmt = Conexion::conectar()->prepare("SELECT montoAcumulado,comprasRegistradas FROM $tabla WHERE id = $idParticipante");
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt-> close();
+
+		$stmt = null;
+
+	}
+	static public function mdlActualizarParticipante($tabla,$idParticipante,$comprasRegistradas,$montoAcumulado){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET comprasRegistradas = $comprasRegistradas,montoAcumulado = $montoAcumulado WHERE id = $idParticipante");
+
+		$stmt ->execute();
+
+		$cuenta = $stmt->rowCount();
+
+		if($cuenta > 0){
+
+			return "ok";
+
+		}else{
+
+			return "error";
+
+		}
+		$stmt-> close();
+
+		$stmt = null;
+
+	}
+	static public function mdlRegistrarBoleto($tabla,$idParticipante,$idFactura){
+
+		$ultimoFolio = Conexion::conectar()->prepare("SELECT if(MAX(folioBoleto)+1 IS NULL,1001,MAX(folioBoleto)+1) as folio FROM $tabla");
+		$ultimoFolio -> execute();
+		$results = $ultimoFolio->fetch();
+		$folioBoleto = $results["folio"];
+
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(`idParticipante`,`idFactura`,`folioBoleto`) values($idParticipante,$idFactura,$folioBoleto)");
+
+		if ($stmt -> execute()) {
+				return "ok";
+		}else{
+				return "error";
+		}
+
+		$stmt-> close();
+
+		$stmt = null;
+
+	}
+	static public function mdlObtenerBoletosGanados($tabla,$idParticipante,$idFactura){
+
+		$stmt = Conexion::conectar()->prepare("SELECT folioBoleto FROM $tabla WHERE idParticipante = $idParticipante and idFactura = $idFactura");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
 		$stmt-> close();
 
 		$stmt = null;

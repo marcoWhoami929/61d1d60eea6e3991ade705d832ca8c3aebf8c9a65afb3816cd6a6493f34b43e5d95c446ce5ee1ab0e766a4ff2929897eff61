@@ -13,11 +13,25 @@ $(function() {
     
     $(window).on('scroll', function(event) {    
         var scroll = $(window).scrollTop();
+
         if (scroll < 10) {
             $(".navbar-area").removeClass("sticky");
         } else{
             $(".navbar-area").addClass("sticky");
         }
+
+        if (scroll < 650) {
+            $("#contenedorFacebook").addClass("desaparecer-facebook");
+            $("#contenedorFacebook").removeClass("contenedor-facebook");
+           
+        } else{
+        
+            $("#contenedorFacebook").addClass("contenedor-facebook");
+            $("#contenedorFacebook").removeClass("desaparecer-facebook");
+           
+            
+        }
+        
     });
     
     

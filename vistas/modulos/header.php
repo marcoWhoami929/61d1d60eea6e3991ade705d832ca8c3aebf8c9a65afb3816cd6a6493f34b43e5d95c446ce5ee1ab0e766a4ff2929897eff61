@@ -26,10 +26,7 @@
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#premios">Premios</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contacto">Contactanos</a>
-
-                                    </li>
+                                    
                                     <li class="nav-item">
 
                                         <?php 
@@ -54,12 +51,19 @@
                                                 
                                             }else{
 
-                                                echo "<a class='page-scroll' href='#' data-toggle='modal' data-target='#modalAcceso'>Acceder</a>";
+                                                echo "<button type='button' class='main-btn main-btn-1' style='margin-top: 10px' data-toggle='modal' data-target='#modalAcceso' style='background:white'>Acceder</button>";
 
                                             }
                                         ?>
                                         
                                         
+                                    </li>
+                                    <li class="nav-item">
+                                         
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contacto">Contactanos</a>
+
                                     </li>
                                    
                                 </ul>

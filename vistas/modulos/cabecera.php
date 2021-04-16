@@ -81,13 +81,18 @@
                                         
                                     </div> <!-- single form -->
                                 </div>
-                                
-                     
+
                                 <div class="col-md-12">
                                     <div class="single-form form-group">
-                                        <button type="submit" class="main-btn main-btn-2">Registrar</button>
+                                        <button type="submit" class="main-btn main-btn-2" id="btnRegister">Registrar</button>
                                     </div> <!-- single form -->
                                     <div id="successRegisterSale"></div>
+                                    <center><div class="spinner" id="spinner"></div></center>
+                                    <script>
+
+                                           document.getElementById("spinner").style.display = "none";
+                                       
+                                    </script>
                                 </div>
                             </div> <!-- row -->
                         </form>
@@ -110,6 +115,8 @@
       /* El evento "change" sólo saltará si son diferentes */
       obj.value = obj.value.replace(/\D/g, '');
     }
+
+   
 </script>
 <style type="text/css" media="screen">
   strong {

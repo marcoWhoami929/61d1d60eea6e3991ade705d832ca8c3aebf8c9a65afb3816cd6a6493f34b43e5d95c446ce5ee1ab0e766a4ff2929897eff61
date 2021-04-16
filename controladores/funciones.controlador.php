@@ -104,7 +104,60 @@ class ControladorFunciones
 		return $respuesta;
 
 	}
+	static public function ctrRegistrarCompra($serie,$folio){
+		
+		$tabla = "facturas";
 
+		$respuesta = ModeloFunciones::mdlRegistrarCompra($tabla,$serie,$folio);
+
+		return $respuesta;
+
+	}
+	static public function ctrObtenerDatosFactura($serie,$folio){
+		
+		$tabla = "facturas";
+
+		$respuesta = ModeloFunciones::mdlObtenerDatosFactura($tabla,$serie,$folio);
+
+		return $respuesta;
+
+	}
+	static public function ctrObtenerDatosParticipante($idParticipante){
+		
+		$tabla = "participantes";
+
+		$respuesta = ModeloFunciones::mdlObtenerDatosParticipante($tabla,$idParticipante);
+
+		return $respuesta;
+
+	}
+	static public function ctrActualizarParticipante($idParticipante,$comprasRegistradas,$montoAcumulado){
+		
+		$tabla = "participantes";
+
+		$respuesta = ModeloFunciones::mdlActualizarParticipante($tabla,$idParticipante,$comprasRegistradas,$montoAcumulado);
+
+		return $respuesta;
+
+	}
+	static public function ctrRegistrarBoleto($idParticipante,$idFactura){
+		
+		$tabla = "boletos";
+
+		$respuesta = ModeloFunciones::mdlRegistrarBoleto($tabla,$idParticipante,$idFactura);
+
+		return $respuesta;
+
+	}
+	static public function ctrObtenerBoletosGanados($idParticipante,$idFactura){
+		
+		$tabla = "boletos";
+
+		$respuesta = ModeloFunciones::mdlObtenerBoletosGanados($tabla,$idParticipante,$idFactura);
+
+		return $respuesta;
+
+	}
 	
 
 }

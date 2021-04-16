@@ -79,6 +79,121 @@ class AjaxFuncionesSorteo{
 		echo json_encode($respuesta);
 
 	}
+	public $serieCompraRegistro;
+	public $folioCompraRegistro;
+	public function ajaxRegistrarCompra(){
+
+		$serie = $this->serieCompraRegistro;
+		$folio = $this->folioCompraRegistro;
+		/*
+		VALIDAR SI EL MONTO PERMITE GENERAR UN BOLETO
+		 */
+		$obtenerDatosFactura = ControladorFunciones::ctrObtenerDatosFactura($serie,$folio);
+		$total = $obtenerDatosFactura["total"];
+		$idFactura = $obtenerDatosFactura["id"];
+
+		if ($total > 700) {
+
+			$respuesta = ControladorFunciones::ctrRegistrarCompra($serie,$folio);
+
+			if ($respuesta == "ok") {
+
+				session_start();
+
+				$idParticipante = $_SESSION["id"];
+
+				$obtenerDatosParticipante = ControladorFunciones::ctrObtenerDatosParticipante($idParticipante);
+
+				$compras = $obtenerDatosParticipante["comprasRegistradas"];
+				$monto = $obtenerDatosParticipante["montoAcumulado"];
+
+				$comprasRegistradas = $compras + 1;
+				$montoAcumulado = $monto + $total;
+
+				$actualizarParticipante = ControladorFunciones::ctrActualizarParticipante($idParticipante,$comprasRegistradas,$montoAcumulado);
+
+				$numeroBoletos = $total / 700;
+				$numeroBoletos = floor($numeroBoletos);
+
+				for ($i=0; $i < $numeroBoletos; $i++) { 
+
+					$registrar = ControladorFunciones::ctrRegistrarBoleto($idParticipante,$idFactura);
+				}
+
+				$response = "exito";
+				
+			}else{
+				$response = "errorregistro";
+			}
+			
+		}else{
+
+			$response = "errormonto";
+
+		}
+	
+		
+
+		echo json_encode($response);
+
+	}
+
+	public $serieCompraSend;
+	public $folioCompraSend;
+	public function ajaxEnviarCorreoConfirmacion(){
+		session_start();
+		$serie = $this->serieCompraSend;
+		$folio = $this->folioCompraSend;
+		$respuesta = ControladorFunciones::ctrObtenerDatosFactura($serie,$folio);
+		$idFactura = $respuesta["id"];
+
+		$idParticipante = $_SESSION["id"];
+
+		$buscarBoletosGanados = ControladorFunciones::ctrObtenerBoletosGanados($idParticipante,$idFactura);
+
+			$string="<br> Gracias por haber registrado tu compra, a continuación se detallarán los boletos registrados:";
+
+			foreach ($buscarBoletosGanados as $key => $value) {
+				
+				$value = $value["folioBoleto"];
+			}
+
+			$string2 = $value;
+
+			set_time_limit(0);
+			ignore_user_abort(true);
+			/*RECOGER VALORES ENVIADOS DESDE INDEX.PHP*/
+			$correo = $_SESSION["correo"];
+			$email = "".$correo."";
+			$sDestino = $email;
+			        // Create the email and send the message
+			        $to = $email; // Add your email address inbetween the '' replacing yourname@yourdomain.com - Aquí es donde el formulario enviará un mensaje a.
+			        $email_subject = "Hola ".$_SESSION["nombre"]."";
+			        $email_body = $string.$string2;
+			        $headers = "From:MIS BOLETOS | RIFA <dekkerapp@sanfranciscodekkerlab.com>\n";
+			        $headers .= "MIME-Version: 1.0r\n";
+			        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+			          $rcss = "../complementos/plantilla/estilo.css";//ruta de archivo css
+                    $fcss = fopen ($rcss, "r");//abrir archivo css
+                    $scss = fread ($fcss, filesize ($rcss));//leer contenido de css
+                    fclose ($fcss);//cerrar archivo css
+
+                //reemplazar sección de plantilla html con el css cargado y mensaje creado
+                    $shtml = file_get_contents('../complementos/plantilla/contacto.html');
+                    $incss  = str_replace('<style id="estilo"></style>',"<style>$scss</style>",$shtml);
+                    $cuerpo = str_replace('<p id="mensaje"></p>',$email_body,$incss);
+                    
+                   	 if(mail($to,$email_subject,$cuerpo,$headers)) {
+                        $accion = "enviado";
+                    } else {
+                        $errorMessage = error_get_last()['message'];
+                        $accion = $errorMessage;
+                    }
+
+					echo json_encode($accion);
+
+	}
 
 
 }
@@ -122,6 +237,22 @@ if (isset($_POST["serieCompra"])) {
 	$buscarCompra -> serieCompra = $_POST["serieCompra"];
 	$buscarCompra -> folioCompra = $_POST["folioCompra"];
 	$buscarCompra -> ajaxBuscarFactura();
+	
+}
+if (isset($_POST["serieCompraRegistro"])) {
+
+	$registrarCompra = new AjaxFuncionesSorteo();
+	$registrarCompra -> serieCompraRegistro = $_POST["serieCompraRegistro"];
+	$registrarCompra -> folioCompraRegistro = $_POST["folioCompraRegistro"];
+	$registrarCompra -> ajaxRegistrarCompra();
+	
+}
+if (isset($_POST["serieCompraSend"])) {
+
+	$envioCorreo = new AjaxFuncionesSorteo();
+	$envioCorreo -> serieCompraSend = $_POST["serieCompraSend"];
+	$envioCorreo -> folioCompraSend = $_POST["folioCompraSend"];
+	$envioCorreo -> ajaxEnviarCorreoConfirmacion();
 	
 }
 
