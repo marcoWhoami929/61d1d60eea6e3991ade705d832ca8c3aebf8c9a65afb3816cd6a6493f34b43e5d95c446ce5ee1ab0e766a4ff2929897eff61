@@ -43,7 +43,7 @@ $(function() {
     
     
     //===== Section Menu Active
-
+    /*
     var scrollLink = $('.page-scroll');
         // Active link switching
         $(window).scroll(function() {
@@ -59,7 +59,7 @@ $(function() {
           }
         });
     });
-    
+    */
     
     //===== Mobile Menu
     

@@ -1,4 +1,5 @@
 <?php
+
 require_once "../controladores/funciones.controlador.php";
 require_once "../modelos/funciones.modelo.php";
 
@@ -18,6 +19,8 @@ class AjaxFuncionesSorteo{
 	public $municipio;
 	public $estado;
 	public $ciudad;
+	public $cp;
+	public $coordenadas;
 
 	public function ajaxRegistrarParticipantes(){
 
@@ -36,6 +39,8 @@ class AjaxFuncionesSorteo{
 						'colonia' => $this->colonia,
 						'municipio' => $this->municipio,
 						'estado' => $this->estado,
+						'cp' => $this->cp,
+						'coordenadas' => $this->coordenadas,
 						'ciudad' => $this->ciudad);
 
 		$respuesta = ControladorFunciones::ctrRegistrarParticipantes($tabla,$array);
@@ -152,25 +157,26 @@ class AjaxFuncionesSorteo{
 		$buscarBoletosGanados = ControladorFunciones::ctrObtenerBoletosGanados($idParticipante,$idFactura);
 
 			$string="<br> Gracias por haber registrado tu compra, a continuación se detallarán los boletos registrados:";
-
+			
 			foreach ($buscarBoletosGanados as $key => $value) {
 				
 				$value = $value["folioBoleto"];
 			}
-
+			
 			$string2 = $value;
 
 			set_time_limit(0);
 			ignore_user_abort(true);
-			/*RECOGER VALORES ENVIADOS DESDE INDEX.PHP*/
-			$correo = $_SESSION["correo"];
-			$email = "".$correo."";
+			
+			$correo = "mm_marco_mar@hotmail.com";
+			$email = $correo;
 			$sDestino = $email;
 			        // Create the email and send the message
 			        $to = $email; // Add your email address inbetween the '' replacing yourname@yourdomain.com - Aquí es donde el formulario enviará un mensaje a.
 			        $email_subject = "Hola ".$_SESSION["nombre"]."";
+			        $subject = $email_subject;
 			        $email_body = $string.$string2;
-			        $headers = "From:MIS BOLETOS | RIFA <dekkerapp@sanfranciscodekkerlab.com>\n";
+			        $headers = "From:MIS BOLETOS | RIFA <dekkerapp@sanfranciscodekkerlab.com>\n"; 
 			        $headers .= "MIME-Version: 1.0r\n";
 			        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
@@ -183,8 +189,9 @@ class AjaxFuncionesSorteo{
                     $shtml = file_get_contents('../complementos/plantilla/contacto.html');
                     $incss  = str_replace('<style id="estilo"></style>',"<style>$scss</style>",$shtml);
                     $cuerpo = str_replace('<p id="mensaje"></p>',$email_body,$incss);
-                    
-                   	 if(mail($to,$email_subject,$cuerpo,$headers)) {
+
+
+                   	 if(mail($to, $subject, $cuerpo, $headers)) {
                         $accion = "enviado";
                     } else {
                         $errorMessage = error_get_last()['message'];
@@ -214,6 +221,8 @@ if (isset($_POST["nombre"])) {
 	$registrar -> municipio = $_POST["municipio"];
 	$registrar -> estado = $_POST["estado"];
 	$registrar -> ciudad = $_POST["ciudad"];
+	$registrar -> cp = $_POST["cp"];
+	$registrar -> coordenadas = $_POST["coordenadas"];
 	$registrar -> ajaxRegistrarParticipantes();
 }
 if (isset($_POST["correoRegistro"])) {

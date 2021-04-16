@@ -1,4 +1,5 @@
 <?php
+
 $idParticipante = $_SESSION["id"];
 $facturas = ControladorFunciones::ctrMostrarCompras($idParticipante);
 
@@ -57,19 +58,28 @@ $facturas = ControladorFunciones::ctrMostrarCompras($idParticipante);
                       </thead>
                       <tbody>
                         <?php
+                          $total = count($facturas);
+                          if ($total > 0) {
+                              
+                               foreach ($facturas as $key => $value) {
+                                  $numero = $key+1;
+                                  echo "<tr>
+                                        <td>".$numero."</td>
+                                        <td>".$value["serie"]."</td>
+                                        <td>".$value["folio"]."</td>
+                                        <td><label class='badge badge-success'>$ ".number_format($value["total"],2)."</label></td>
+                                        <td class='text-success'>".$value["fechaFactura"]."<i class='ti-arrow-up'></i></td>
+                                        
+                                      </tr>";
+                                }
 
-                          foreach ($facturas as $key => $value) {
-                            $numero = $key+1;
-                            echo "<tr>
-                                  <td>".$numero."</td>
-                                  <td>".$value["serie"]."</td>
-                                  <td>".$value["folio"]."</td>
-                                  <td><label class='badge badge-success'>$ ".number_format($value["total"],2)."</label></td>
-                                  <td class='text-success'>".$value["fechaFactura"]."<i class='ti-arrow-up'></i></td>
-                                  
-                                </tr>";
+
+                          }else{
+
+                               echo "<strong style='font-size:18px;'>AUN NO REGISTRAS TUS COMPRAS</strong>";
+
                           }
-
+                         
                         ?>
                        
                       </tbody>

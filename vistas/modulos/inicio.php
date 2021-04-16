@@ -20,7 +20,7 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- header content -->
-    <div id="contenedorFacebook" class="desaparecer-facebook">
+    <div id="contenedorFacebook" class="desaparecer-facebook" style="display: none">
         <div class="card h-100">
                        
                         <div class="card-block ">
@@ -160,12 +160,11 @@
                         </div>
                        
                          <div class="pricing-price2">
-                          <p class="text" style="color:rgba(24, 99, 255, 1)">Con un valor de</p>
-                          <span style="color:rgba(24, 99, 255, 1)">$ 0.00</span>
+                          
                         </div>
                          <div class="pricing-list">
                             <ul>
-                                <li ></li>
+                                <li>PISTOLA ACUSPRAY 07HS-PRO</li>
                                
                             </ul>
                         </div>
@@ -179,12 +178,11 @@
                            
                         </div>
                         <div class="pricing-price3">
-                           <p class="text" style="color:rgba(24, 99, 255, 1)">Con un valor de</p>
-                          <span style="color:rgba(24, 99, 255, 1)">$ 0.00</span>
+                           
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                   <li style="text-transform: uppercase;">Lijadora 3m File Belt Sander 28366, 6 Hp Motor, 14-9/16</li>
+                                   <li style="text-transform: uppercase;">ESMERILADORA 3M File Belt Sander 28366, 6 Hp Motor, 14-9/16</li>
                                
                             </ul>
                         </div>
@@ -427,7 +425,7 @@
                                         
                                     </div> <!-- single form -->
                                 </div>
-                                 <div class="col-lg-4 col-md-4 col-sm-6">
+                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="single-form form-group">
                                         <input type="email" class="form-control" name="correo" id="correo" placeholder="Email" required data-validation-required-message="Íngrese un correo electrónico.">
                                         <i class="lni-envelope"></i>
@@ -435,7 +433,7 @@
                                         
                                     </div> <!-- single form -->
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="single-form form-group">
                                         <input type="text" class="form-control" name="password" id="password" placeholder="Password" required data-validation-required-message="Íngrese una contraseña.">
                                         <i class="lni-key"></i>
@@ -443,25 +441,37 @@
                                         
                                     </div> <!-- single form -->
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="single-form form-group">
                                         <input type="tel" name="celular" id="celular" placeholder="Celular" required data-validation-required-message="Ingrese su número celular" maxlength="10" onkeyup="limpiarNumero(this)" onchange="limpiarNumero(this)">
                                         <i class="lni-phone-handset"></i>
                                         <p class="help-block text-danger"></p>
                                     </div> <!-- single form -->
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                  <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="single-form form-group">
                                         <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" maxlength="10" onkeyup="limpiarNumero(this)" onchange="limpiarNumero(this)">
                                         <i class="lni-phone-set"></i>
                                         <p class="help-block text-danger"></p>
                                     </div> <!-- single form -->
                                 </div>
+                                 <div class="col-lg-12 col-md-12 col-sm-12">
+                                           <small>Si desea que el sistema rellene los campos faltantes,en el campo INGRESAR DIRECCION, capturando su direccion y sistema desplegará las direcciones que coinciden, eligiendo la direccion correcta.</small>
+                                </div>
                               
+                               
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="single-form form-group">
+                                        <input type="text" name="autocomplete" class="form-control  text-uppercase" id="autocomplete" placeholder="Ingresar dirección" >
+                                        <i class="lni-apartment"></i>
+                                        <p class="help-block text-danger"></p>
+
+                                    </div> <!-- single form -->
+                                </div>
                           
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="single-form form-group">
-                                        <input type="text" name="calle" class="form-control  text-uppercase" id="calle" placeholder="Calle" required data-validation-required-message="Ingrese la calle">
+                                        <input type="text" name="calle" class="form-control  text-uppercase" id="route" placeholder="Calle" required data-validation-required-message="Ingrese la calle">
                                         <i class="lni-apartment"></i>
                                         <p class="help-block text-danger"></p>
                                     </div> <!-- single form -->
@@ -469,7 +479,7 @@
                      
                                 <div class="col-lg-3 col-md-3 col-sm-3">
                                     <div class="single-form form-group">
-                                        <input type="text" name="numInterior" id="numInterior" placeholder="N° Interior" required data-validation-required-message="Ingrese numero interior">
+                                        <input type="text" name="numInterior" id="street_number" placeholder="N° Interior" required data-validation-required-message="Ingrese numero interior">
                                         <i class="lni-apartment"></i>
                                         <p class="help-block text-danger"></p>
                                     </div> <!-- single form -->
@@ -483,30 +493,34 @@
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-3">
                                     <div class="single-form form-group">
-                                        <input type="text" name="colonia" class="text-uppercase" id="colonia" placeholder="Colonia" required data-validation-required-message="Ingrese la colonia">
+                                        <input type="text" name="colonia" class="text-uppercase" id="sublocality_level_1" placeholder="Colonia" required data-validation-required-message="Ingrese la colonia">
                                         <i class="lni-apartment"></i>
                                         <p class="help-block text-danger"></p>
                                     </div> <!-- single form -->
                                 </div>
+                                <!--
                                 <div class="col-lg-3 col-md-3 col-sm-3">
                                     <div class="single-form form-group">
                                         <input type="text" name="municipio" class="text-uppercase"  id="municipio" placeholder="Municipio" required data-validation-required-message="Ingrese el municipio">
                                         <i class="lni-apartment"></i>
                                         <p class="help-block text-danger"></p>
-                                    </div> <!-- single form -->
+                                    </div> 
                                 </div>
+                            -->
                                 <div class="col-lg-3 col-md-3 col-sm-3">
                                     <div class="single-form form-group">
-                                        <input type="text" name="estado" class="text-uppercase" id="estado" placeholder="Estado" required data-validation-required-message="Ingrese el estado">
+                                        <input type="text" name="estado" class="text-uppercase" id="administrative_area_level_1" placeholder="Estado" required data-validation-required-message="Ingrese el estado">
                                         <i class="lni-apartment"></i>
                                         <p class="help-block text-danger"></p>
                                     </div> <!-- single form -->
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-3">
                                     <div class="single-form form-group">
-                                        <input type="text" class="text-uppercase" name="ciudad" id="ciudad" placeholder="Ciudad" required data-validation-required-message="Ingrese la ciudad">
+                                        <input type="text" class="text-uppercase" name="ciudad" id="locality" placeholder="Ciudad" required data-validation-required-message="Ingrese la ciudad">
                                         <i class="lni-apartment"></i>
                                         <p class="help-block text-danger"></p>
+                                        <input type="hidden" id="postal_code" name="">
+                                        <input type="hidden" id="coordenadas" name="">
                                     </div> <!-- single form -->
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -517,6 +531,7 @@
                                   </label>
                                 </div>
                                 </div>
+                     
                                 <div class="col-md-12">
                                     <div class="single-form form-group">
                                         <button type="submit" class="main-btn main-btn-2">Enviar</button>
@@ -711,13 +726,13 @@
       obj.value = obj.value.replace(/\D/g, '');
     }
      $(document).ready(function(){
-      //initialize();
+      initialize();
      
   });
 </script>
 
 <style type="text/css" media="screen">
-  #calle{
+  #autocomplete{
     background-color: #FFF;
     z-index: 2001;
    

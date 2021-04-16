@@ -15,7 +15,7 @@ $sDestino = $email;
         $to = $email; // Add your email address inbetween the '' replacing yourname@yourdomain.com - Aquí es donde el formulario enviará un mensaje a.
         $email_subject = "".$subject."";
         $email_body = $string;
-        $headers = "From:CONTACTO | RIFAS <dekkerapp@sanfranciscodekkerlab.com>\n"; 
+        $headers = "From:CONTACTO | RIFAS <dekkerapp@sanfranciscodekkerlab.com>\n";
         $headers .= "MIME-Version: 1.0r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
@@ -28,9 +28,15 @@ $sDestino = $email;
                     $shtml = file_get_contents('../../../complementos/plantilla/contacto.html');
                     $incss  = str_replace('<style id="estilo"></style>',"<style>$scss</style>",$shtml);
                     $cuerpo = str_replace('<p id="mensaje"></p>',$email_body,$incss);
-                    mail($to,$email_subject,$cuerpo,$headers);
+                    
 
+                    if(mail($to, $subject, $cuerpo, $headers)) {
+                        return true; 
+                    } else {
+                        $errorMessage = error_get_last()['message'];
+                        echo $errorMessage;
+                    }
 
-                    return true; 
+                    
 
                     ?>

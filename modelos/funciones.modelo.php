@@ -13,7 +13,7 @@ class ModeloFunciones
 
 		$passwordEncrypt = $encriptar($array["password"]);
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(`nombre`,`apellidoPaterno`,`apellidoMaterno`,`correo`,`password`,`celular`,`telefono`,`calle`,`numeroInterior`,`numeroExterior`,`colonia`,`municipio`,`estado`,`ciudad`,`pais`) values(:nombre,:apellidoP,:apellidoM,:correo,'".$passwordEncrypt."',:celular,:telefono,:calle,:numInterior,:numExterior,:colonia,:municipio,:estado,:ciudad,'MEXICO')");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(`nombre`,`apellidoPaterno`,`apellidoMaterno`,`correo`,`password`,`celular`,`telefono`,`calle`,`numeroInterior`,`numeroExterior`,`colonia`,`municipio`,`estado`,`ciudad`,`pais`,`cp`,`coordenadas`,`comprasRegistradas`,`montoAcumulado`,`clasificacion`) values(:nombre,:apellidoP,:apellidoM,:correo,'".$passwordEncrypt."',:celular,:telefono,:calle,:numInterior,:numExterior,:colonia,:municipio,:estado,:ciudad,'MEXICO',:cp,:coordenadas,'0','0','0')");
 	
 
 			$stmt -> bindParam(":nombre", $array["nombre"],PDO::PARAM_STR);
@@ -29,6 +29,8 @@ class ModeloFunciones
 			$stmt -> bindParam(":municipio", $array["municipio"],PDO::PARAM_STR);
 			$stmt -> bindParam(":estado", $array["estado"],PDO::PARAM_STR);
 			$stmt -> bindParam(":ciudad", $array["ciudad"],PDO::PARAM_STR);
+			$stmt -> bindParam(":cp", $array["cp"],PDO::PARAM_STR);
+			$stmt -> bindParam(":coordenadas", $array["coordenadas"],PDO::PARAM_STR);
 
 			if ($stmt -> execute()) {
 				return "ok";
@@ -116,8 +118,19 @@ class ModeloFunciones
 
 	}
 	static public function mdlMostrarCompras($tabla,$idParticipante){
+		$consulta = Conexion::conectar()->prepare("SELECT COUNT(id) as total from boletos where idParticipante = $idParticipante");
 
-		$stmt = Conexion::conectar()->prepare("SELECT fac.serie,fac.folio,fac.total,fac.fechaFactura FROM $tabla as bol INNER JOIN facturas as fac ON bol.idFactura = fac.id WHERE bol.idParticipante = $idParticipante GROUP by fac.serie,fac.folio");
+		$consulta -> execute();
+		$total = $consulta->fetch();
+		$totalBoletos = $total["total"];
+		if ($totalBoletos == 0) {
+			$stmt = Conexion::conectar()->prepare("SELECT fac.serie,fac.folio,fac.total,fac.fechaFactura FROM $tabla as bol INNER JOIN facturas as fac ON bol.idFactura = fac.id WHERE bol.idParticipante = $idParticipante");
+		}else{
+
+			$stmt = Conexion::conectar()->prepare("SELECT fac.serie,fac.folio,fac.total,fac.fechaFactura FROM $tabla as bol INNER JOIN facturas as fac ON bol.idFactura = fac.id WHERE bol.idParticipante = $idParticipante GROUP by fac.serie,fac.folio,fac.total,fac.fechaFactura");
+
+		}
+		
 
 		$stmt -> execute();
 
