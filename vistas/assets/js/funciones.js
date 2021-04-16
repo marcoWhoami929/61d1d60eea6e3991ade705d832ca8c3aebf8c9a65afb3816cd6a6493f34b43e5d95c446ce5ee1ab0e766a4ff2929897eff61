@@ -81,22 +81,22 @@ $(function() {
             var password = $("input#password").val();
             var telefono = $("input#telefono").val();
             var celular = $("input#celular").val();
-            var calle = $("input#calle").val();
-            var numInterior = $("input#numInterior").val();
+            var calle = $("input#route").val();
+            var numInterior = $("input#street_number").val();
             var numExterior = $("input#numExterior").val();
-            var colonia = $("input#colonia").val();
-            var municipio = $("input#municipio").val();
-            var estado = $("input#estado").val();
-            var ciudad = $("input#ciudad").val();
+            var colonia = $("input#sublocality_level_1").val();
+            var municipio = $("input#administrative_area_level_1").val();
+            var estado = $("input#administrative_area_level_1").val();
+            var ciudad = $("input#locality").val();
+            var cp = $("input#postal_code").val();
+            var coordenadas = $("input#coordenadas").val();
             
             if (nombre.indexOf(' ') >= 0) {
-                nombre = name.split(' ').slice(0, -1).join(' ');
+                //nombre = name.split(' ').slice(0, -1).join(' ');
             }
-
             var isChecked = document.getElementById('aceptarTerminos').checked;
             if(isChecked){
-            
-                 $.ajax({
+            $.ajax({
                 url: "ajax/funciones.ajax.php",
                 type: "POST",
                 data: {
@@ -127,7 +127,9 @@ $(function() {
                                 colonia: colonia.toUpperCase(),
                                 municipio: municipio.toUpperCase(),
                                 estado: estado.toUpperCase(),
-                                ciudad: ciudad.toUpperCase()
+                                ciudad: ciudad.toUpperCase(),
+                                cp: cp,
+                                coordenadas:coordenadas
                             },
                             cache: false,
                             success: function(respuesta) {
@@ -187,8 +189,8 @@ $(function() {
 
                 }
             });
-
-            }else{
+            
+             }else{
 
                   
             $('#successRegister').html("<div class='alert alert-danger'>");
@@ -197,9 +199,6 @@ $(function() {
             $('#successRegister > .alert-danger').append('</div>');
 
             }
-
-           
-
 
             /***/
             
@@ -330,7 +329,7 @@ $(function() {
                                             .append('</div>');
                                         
                                         $.ajax({
-                                             url: "vistas/assets/mail/contact_me.php",
+                                             url: "vistas/assets/mail/confirmBoletos.php",
                                             type: "POST",
                                             data: {
                                                 serieCompraSend: serieCompra,
@@ -339,11 +338,7 @@ $(function() {
                                             },
                                             cache: false,
                                             success: function(resp) {
-                                                  var response = resp;
-                                                  var responseSend = response.replace(/['"]+/g, '');
-                                                  if (responseSend == "enviado") {
-
-                                                     // Success message
+                                                 // Success message
                                                     $('#successAcces').html("<div class='alert alert-success'>");
                                                     $('#successAcces > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                                                         .append("</button>");
@@ -357,19 +352,6 @@ $(function() {
                                                     document.getElementById("btnRegister").style.display = "";
                                                     document.getElementById("spinner").style.display = "none";
                                                     setTimeout(function(){  location.href = "dashboard"}, 1000);
-
-                                                  }else{
-
-                                                    // Fail message
-                                                    $('#successAcces').html("<div class='alert alert-danger'>");
-                                                    $('#successAcces > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                                                        .append("</button>");
-                                                    $('#successAcces > .alert-danger').append($("<strong>").text("Hubo un eror al enviar el correo,el registro de la compra se realizó exitosamente."));
-                                                    $('#successAcces > .alert-danger').append('</div>');
-                                                    //clear all fields
-                                                    
-
-                                                  }
                                                
                                             }
                                         });

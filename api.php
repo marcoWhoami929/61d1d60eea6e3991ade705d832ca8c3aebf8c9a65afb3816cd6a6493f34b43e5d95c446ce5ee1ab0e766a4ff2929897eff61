@@ -7,29 +7,64 @@ mysqli_set_charset($conn, 'utf8');
 mysqli_select_db($conn,"sanfranc_rifa") or die("could not connect database");
 
 //****SOLICITAR LA CANCELACION DE LA FACTURA EN VENTAS CRM
-if(isset($_POST['cancelarFacturaVenta']))
+if(isset($_POST['cargarFacturasRifa']))
 {	
 	
 
-	  	$serieFactura = mysqli_real_escape_string($conn,htmlspecialchars(trim($_POST['serieFactura'])));
-	  	$folioFactura = mysqli_real_escape_string($conn,htmlspecialchars(trim($_POST['folioFactura'])));
-	  	$motivoCancelacion = mysqli_real_escape_string($conn,htmlspecialchars(trim($_POST["motivoCancelacion"])));
-	  	$fechaCancelacion = date('Y-m-d h:m:s');
-        
+	  	$lista = $_POST["listaFacturas"];
 
-		$cancelacion = mysqli_query($conn,"UPDATE `ventas` SET `cancelado` = '1',`estatus` = 'Cancelada',`motivoCancelacion` = '$motivoCancelacion',`fechaCancelacion` = '$fechaCancelacion',`estatusVenta` = '0'  WHERE  `serie` = '$serieFactura' and `folio` = '$folioFactura'");
-
+		$arregloFacturasRifa = json_decode($lista,true);
 		
-		if($cancelacion){
+		foreach ($arregloFacturasRifa as $key => $value) {
+				
+				$consulta1 = "SELECT * FROM facturas WHERE folio = '".str_replace(',','',$value["folio"])."' and serie = '".$value["serie"]."'";
 
-			echo "success";
+				$ejecutar = mysqli_query($conn, $consulta1) or die("database error:". mysqli_error($conn));
 
-		}else{
+				$filas = mysqli_num_rows($ejecutar);
+			
 
-			echo "failed";
+				if ($filas) {
+					$fechaFactura = substr($value["fecha"]["date"],0,10);
+					$actualizarFactura = "UPDATE facturas set total = '".$value["total"]."',fechaFactura = '".$fechaFactura."',cancelado = '".$value["cancelado"]."' where serie = '".$value["serie"]."' and folio = '".str_replace(',','',$value["folio"])."'";
+					$actualizar = mysqli_query($conn, $actualizarFactura) or die("database error:". mysqli_error($conn));
+
+					/*
+					if($actualizar){
+
+						echo "success";
+
+					}else{
+
+						echo "failed";
+					}
+
+					echo mysqli_error($conn);
+					*/
+
+				}else{
+
+					$fechaFactura = substr($value["fecha"]["date"],0,10);
+					$insertarFactura = "INSERT INTO facturas (`cliente`, `serie`,`folio`,`total`,`fechaFactura`,`elegida`,`cancelado`) VALUES ('".$value["razonSocial"]."','".$value["serie"]."','".str_replace(',','',$value["folio"])."','".$value["total"]."','".$fechaFactura."','0','".$value["cancelado"]."')";
+					$insertar = mysqli_query($conn, $insertarFactura) or die("database error:". mysqli_error($conn));
+					/*
+					if($insertar){
+
+						echo "success";
+
+					}else{
+
+						echo "failed";
+					}
+					
+					echo mysqli_error($conn);
+					*/
+
+			}
 		}
+		echo "finalizado";
 
-		echo mysqli_error($conn);
+
 }
 
 ?>

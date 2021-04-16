@@ -74,6 +74,15 @@ session_start();
      <!--====== Boostrap validation js ======-->
     <script src="vistas/assets/js/jqBootstrapValidation.js"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X29J1963F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X29J1963F8');
+    </script>
 
 </head>
 
