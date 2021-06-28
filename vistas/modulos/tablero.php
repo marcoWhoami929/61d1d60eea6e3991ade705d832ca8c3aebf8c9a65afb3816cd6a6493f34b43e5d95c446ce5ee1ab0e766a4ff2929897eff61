@@ -117,7 +117,7 @@ $obtenerPremios = ControladorFunciones::ctrBuscarPremios();
                                     <div class="container">
                                         <div class="row" id="contenedorBoletos">
                                             <p class="card-description">
-                                                Cuanto te falta
+                                                Cuanto me falta
                                             </p>
                                             <div class="table-responsive">
                                                 <table class="table table-striped">
@@ -148,13 +148,26 @@ $obtenerPremios = ControladorFunciones::ctrBuscarPremios();
 
                                                             foreach ($obtenerPremios as $key => $value) {
                                                                 $numero = $key + 1;
+                                                                $pendiente = (($acumula["premio" . $numero . ""] / $value["montoAcumulado"]) * 100);
 
+                                                                if ($pendiente <= 30) {
+                                                                    $clase = 'danger';
+                                                                } else if ($pendiente > 30 and $pendiente <= 70) {
+                                                                    $clase = 'warning';
+                                                                } else if ($pendiente > 70) {
+                                                                    $clase = 'success';
+                                                                }
+                                                                $porcentaje = 100 - $pendiente;
+                                                                $mensaje = "Te falta el  <strong>" . number_format($porcentaje, 2) . " %</strong> para ganarte el premio $numero";
                                                                 echo "<tr>
                                                                     <td>" . $numero . "</td>
                                                                     <td>" . $value["promocion"] . "</td>
                                                                     <td>$ " . number_format($acumula["premio" . $numero . ""], 2) . "</td>
-                                                                    <td></td>
-                                                                    <td></td>
+                                                                    <td> <p>Llevas el " . number_format($pendiente, 2) . " % acumulado</p><div class='progress'>
+                                                                   
+                                                                    <div class='progress-bar bg-$clase' role='progressbar' style='width: $pendiente%' aria-valuenow='$pendiente' aria-valuemin='0' aria-valuemax='100'></div>
+                                                                    </div></td>
+                                                                    <td>" . $mensaje . "</td>
                                                                     
                                                                 </tr>";
                                                             }
