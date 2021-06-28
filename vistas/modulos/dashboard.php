@@ -383,13 +383,10 @@ em {
     
 }
   </style>
-  <script src="vistas/modulos/vendors/chart.js/Chart.min.js"></script>
-
+ 
   <script src="vistas/modulos/js/off-canvas.js"></script>
   <script src="vistas/modulos/js/hoverable-collapse.js"></script>
   <script src="vistas/modulos/js/template.js"></script>
-  <script src="vistas/modulos/js/todolist.js"></script>
-
   <script src="vistas/modulos/js/dashboard.js"></script>
   
 </body>

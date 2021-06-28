@@ -8,7 +8,7 @@ class Ruta{
 
 	public function ctrRutaServidor(){
 
-		return "https://sanfranciscodekkerlab.com/rifa/";
+		return "https://sanfranciscodekkerlab.com/acumulaygana/";
 	
 	}
 

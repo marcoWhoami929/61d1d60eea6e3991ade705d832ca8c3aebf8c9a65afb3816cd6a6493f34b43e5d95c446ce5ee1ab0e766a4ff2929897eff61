@@ -15,7 +15,7 @@ $sDestino = $email;
         $to = $email; // Add your email address inbetween the '' replacing yourname@yourdomain.com - Aquí es donde el formulario enviará un mensaje a.
         $email_subject = "".$subject."";
         $email_body = $string;
-        $headers = "From:CONTACTO | RIFAS <dekkerapp@sanfranciscodekkerlab.com>\n";
+        $headers = "From:CONTACTO | ACUMULA Y GANA <dekkerapp@sanfranciscodekkerlab.com>\n";
         $headers .= "MIME-Version: 1.0r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 

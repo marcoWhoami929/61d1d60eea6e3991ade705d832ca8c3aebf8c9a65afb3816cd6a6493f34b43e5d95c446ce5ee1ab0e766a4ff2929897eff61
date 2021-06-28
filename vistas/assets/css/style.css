@@ -116,9 +116,9 @@ p {
     -moz-box-shadow: 0px 5px 29px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 29px 0px rgba(0, 0, 0, 0.25); }
   .main-btn.main-btn-2 {
-    background: -webkit-linear-gradient(left, #942D5C 0%, #1664ff 50%, #942D5C 100%);
-    background: -o-linear-gradient(left, #942D5C 0%, #1664ff 50%, #942D5C 100%);
-    background: linear-gradient(to right, #942D5C 0%, #1664ff 50%, #942D5C 100%);
+    background: -webkit-linear-gradient(left, #012F6B 0%, #1664ff 50%, #012F6B 100%);
+    background: -o-linear-gradient(left, #012F6B 0%, #1664ff 50%, #012F6B 100%);
+    background: linear-gradient(to right, #012F6B 0%, #1664ff 50%, #012F6B 100%);
     background-size: 200% auto;
     color: #fff;
     background-position: left center;
@@ -447,7 +447,7 @@ p {
   transition: all 0.3s ease-out 0s; 
 }
 #modalEstilo{
-  background: linear-gradient(to right, #942D5C 0%, #1664ff 100%);
+  background: linear-gradient(to right, #012F6B 0%, #1664ff 100%);
 
 }
 #modalEstilo h5{
@@ -459,7 +459,7 @@ p {
     content: '';
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #942D5C 0%, #1664ff 100%);
+    background: linear-gradient(to right, #012F6B 0%, #1664ff 100%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -811,9 +811,9 @@ p {
       content: '';
       width: 100%;
       height: 100%;
-      background: -webkit-linear-gradient(left, #942D5C 0%, #1664ff 100%);
-      background: -o-linear-gradient(left, #942D5C 0%, #1664ff 100%);
-      background: linear-gradient(to right, #942D5C 0%, #1664ff 100%);
+      background: -webkit-linear-gradient(left, #012F6B 0%, #1664ff 100%);
+      background: -o-linear-gradient(left, #012F6B 0%, #1664ff 100%);
+      background: linear-gradient(to right, #012F6B 0%, #1664ff 100%);
       top: 0;
       left: 0;
       z-index: -1;
@@ -858,9 +858,9 @@ p {
       height: 100%;
       top: 0;
       left: 0;
-      background: -webkit-linear-gradient(left, #942D5C 0%, #1664ff 100%);
-      background: -o-linear-gradient(left, #942D5C 0%, #1664ff 100%);
-      background: linear-gradient(to right, #942D5C 0%, #1664ff 100%);
+      background: -webkit-linear-gradient(left, #012F6B 0%, #1664ff 100%);
+      background: -o-linear-gradient(left, #012F6B 0%, #1664ff 100%);
+      background: linear-gradient(to right, #012F6B 0%, #1664ff 100%);
       z-index: -1;
       opacity: 0;
       -webkit-transition: all 0.3s ease-out 0s;
@@ -936,9 +936,9 @@ p {
     height: 100%;
     top: 0;
     left: 0;
-    background: -webkit-linear-gradient(left, #942D5C 0%, #1664ff 100%);
-    background: -o-linear-gradient(left, #942D5C 0%, #1664ff 100%);
-    background: linear-gradient(to right, #942D5C 0%, #1664ff 100%);
+    background: -webkit-linear-gradient(left, #012F6B 0%, #1664ff 100%);
+    background: -o-linear-gradient(left, #012F6B 0%, #1664ff 100%);
+    background: linear-gradient(to right, #012F6B 0%, #1664ff 100%);
     z-index: -1;
     opacity: 0;
     -webkit-transition: all 0.3s ease-out 0s;
@@ -1027,7 +1027,7 @@ p {
     color: #777777;
     margin-top: 10px; }
   .single-pricing .pricing-price1 {
-    background-image: url(../images/premio1.jpeg);
+    background-image: url(../images/promocion1.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1066,14 +1066,14 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price1:hover {
 
-    background-image: url(../images/premio1.jpeg);
+    background-image: url(../images/promocion1.jpg);
 
     opacity: 0.9;
     
   }
 
   .single-pricing .pricing-price2 {
-    background-image: url(../images/premio3.jpeg);
+    background-image: url(../images/promocion1.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1112,13 +1112,13 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price2:hover {
 
-    background-image: url(../images/premio3.jpeg);
+    background-image: url(../images/promocion1.jpg);
 
     opacity: 0.9;
     
   }
    .single-pricing .pricing-price3 {
-    background-image: url(../images/premio4.jpg);
+    background-image: url(../images/promocion1.jpg);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1157,7 +1157,52 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price3:hover {
 
-    background-image: url(../images/premio4.jpg);
+    background-image: url(../images/promocion1.jpg);
+
+    opacity: 0.9;
+    
+  }
+  .single-pricing .pricing-price4 {
+    background-image: url(../images/promocion1.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 5;
+    padding: 20px 0 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 35px; 
+    height:400px; 
+  }
+    .single-pricing .pricing-price4::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(24, 99, 255, 0.2);
+      -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+      z-index: -1; }
+    .single-pricing .pricing-price4 span {
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff; }
+    .single-pricing .pricing-price4 .text {
+      color: #fff; }
+  .single-pricing .pricing-list {
+    padding-top: 15px; }
+    .single-pricing .pricing-list ul li {
+      font-size: 16px;
+      color: #777777;
+      margin-top: 15px; }
+  .single-pricing .pricing-price4:hover {
+
+    background-image: url(../images/promocion1.jpg);
 
     opacity: 0.9;
     
@@ -1283,7 +1328,7 @@ p {
     height: 100%;
     width: 100%;
     left: 0;
-    background: linear-gradient(to right, #942D5C 0%, #1664ff 100%); }
+    background: linear-gradient(to right, #012F6B 0%, #1664ff 100%); }
 
 .footer-subscribe .subscribe-title {
   font-size: 50px;
@@ -1407,9 +1452,9 @@ p {
   height: 45px;
   line-height: 45px;
   border-radius: 50%;
-  background: -webkit-linear-gradient(left, #942D5C 0%, #1664ff 50%, #942D5C 100%);
-  background: -o-linear-gradient(left, #942D5C 0%, #1664ff 50%, #942D5C 100%);
-  background: linear-gradient(to right, #942D5C 0%, #1664ff 50%, #942D5C 100%);
+  background: -webkit-linear-gradient(left, #012F6B 0%, #1664ff 50%, #012F6B 100%);
+  background: -o-linear-gradient(left, #012F6B 0%, #1664ff 50%, #012F6B 100%);
+  background: linear-gradient(to right, #012F6B 0%, #1664ff 50%, #012F6B 100%);
   background-size: 200% auto;
   text-align: center;
   z-index: 99;

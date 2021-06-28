@@ -277,6 +277,31 @@ class ModeloFunciones
 		$stmt = null;
 
 	}
+	static public function mdlMostrarTotalAcumulado($tabla,$idParticipante){
+
+		$stmt = Conexion::conectar()->prepare("SELECT facturasRegistradas,premio1,premio2,premio3,premio4 FROM $tabla WHERE id = $idParticipante");
+
+		$stmt -> execute();
+
+		return $stmt -> fetch();
+
+		$stmt-> close();
+
+		$stmt = null;
+
+	}
+	static public function mdlBuscarPremios($tabla){
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+		$stmt-> close();
+
+		$stmt = null;
+
+	}
 
 }
-?>

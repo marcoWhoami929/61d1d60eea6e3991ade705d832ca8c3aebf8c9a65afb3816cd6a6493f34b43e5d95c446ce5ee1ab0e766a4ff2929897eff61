@@ -1,12 +1,12 @@
 
- <div id="home" class="header-content-area bg_cover d-flex align-items-center" style="background-image: url(vistas/assets/images/header-bg.png)">
+ <div id="home" class="header-content-area bg_cover d-flex align-items-center" style="background-image: url(vistas/assets/images/header.png)">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <div data-countdown="2021/05/03"></div>
+                        <div data-countdown="2021/07/01"></div>
                         
                         <div class="header-content text-center">
-                            <h2 class="header-title">Estás A Punto De Ganar</h2>
+                            <h2 class="header-title" style="color: transparent;">Registra y Gana</h2>
                             <h3 class="sub-title" style="color: transparent;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -51,11 +51,11 @@
                 <div class="col-lg-6">
                     <div class="about-content mt-45 wow fadeInRight" data-wow-duration="1s">
                         <div class="section-title">
-                            <h2 class="title">Estás A Punto De Ganar</h2>
+                            <h2 class="title">Registra Tu Compra Y Gana</h2>
                         </div>
                        
-                        <p class="text mt-30">Participa en nuestra gran rifa, que se llevará a cabo el día </p>
-                        <p class="date"><span>3<sup></sup></span> Mayo del 2021</p>
+                        <p class="text mt-30">Cada una de tus compras que tengan incluidos los siguientes productos te dan mas oportunidades de ganar. </p>
+                      
                     </div> <!-- about content -->
                 </div>
             </div> <!-- row -->
@@ -68,8 +68,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-20">
-                        <h2 class="title">Gana en 3 sencillos pasos</h2>
-                        <p class="text">Entre mas ventas registres mas oportunidades tienes de ganar.</p>
+                        <h2 class="title">Acumula y Gana en 3 sencillos pasos</h2>
+                        <p class="text">Entre mas compras registres acumulas y tienes mas oportunidades tienes de ganar.</p>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -83,18 +83,18 @@
                         <div class="features-content">
                             <h4 class="features-title"><a href="#">Registra tu compra</a></h4>
                             <p class="text"></p>
-                            <strong>Solo compras de contado</strong>
+                            <strong></strong>
                         </div>
                     </div> <!-- single features -->
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInTop" data-wow-duration="1s">
                     <div class="single-features text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="features-icon">
-                            <i class="lni-ticket"></i>
+                            <i class="lni-dollar"></i>
                             <span>02</span>
                         </div>
                         <div class="features-content">
-                            <h4 class="features-title"><a href="#">Obten tu boleto para participar</a></h4>
+                            <h4 class="features-title"><a href="#">Acumula tus compras</a></h4>
                             <p class="text"></p>
                         </div>
                     </div> <!-- single features -->
@@ -133,38 +133,40 @@
                 <div class="col-lg-4 col-md-8 col-sm-9">
                     <div class="single-pricing active text-center mt-30 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
                         <div class="pricing-name">
-                            <h4 class="pricing-title">PREMIO 1</h4>
+                            <h4 class="pricing-title">PROMOCIÓN 1</h4>
+                            
                             
                         </div>
                         <div class="pricing-price1">
-                          <p class="text" style="color:rgba(24, 99, 255, 1)">Con un valor de</p>
-                          <span style="color:rgba(24, 99, 255, 1)">$ 17,000.00</span>
+                          <p class="text" style="color:rgba(24, 99, 255, 1)">Acumula</p>
+                          <span style="color:rgba(24, 99, 255, 1)">$ 2,000.00</span>
                             
                         </div>
                          <div class="pricing-list">
                             <ul>
-                                <li>PISTOLA SAGOLA 4600 XTREME</li>
+                                <li>GÁNATE UNA MASILLA ULTRA PLASTIC SW-15</li>
+                                <li>(Limitado a 40 piezas)</li>
                                
                             </ul>
                             
                         </div>
-                       
-                        
                     </div> <!-- single pricing -->
                 </div>
                 <div class="col-lg-4 col-md-8 col-sm-9">
                     <div class="single-pricing text-center mt-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
                         <div class="pricing-name">
-                            <h4 class="pricing-title">PREMIO 2</h4>
+                            <h4 class="pricing-title">PROMOCIÓN 2</h4>
                           
                         </div>
                        
                          <div class="pricing-price2">
-                          
+                          <p class="text" style="color:rgba(24, 99, 255, 1)">Acumula</p>
+                          <span style="color:rgba(24, 99, 255, 1)">$ 1,500.00</span>
                         </div>
                          <div class="pricing-list">
                             <ul>
-                                <li>PISTOLA ACUSPRAY 07HS-PRO</li>
+                                <li>GÁNATE UNA PLAYERA Y GORRA HOUSE OF KOLOR</li>
+                                <li>(Limitado a 10 juegos)</li>
                                
                             </ul>
                         </div>
@@ -174,21 +176,49 @@
                 <div class="col-lg-4 col-md-8 col-sm-9">
                     <div class="single-pricing text-center mt-30 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s">
                         <div class="pricing-name">
-                            <h4 class="pricing-title">PREMIO 3</h4>
+                        <h4 class="pricing-title">PROMOCIÓN 3</h4>
                            
                         </div>
                         <div class="pricing-price3">
-                           
+                          <p class="text" style="color:rgba(24, 99, 255, 1)">Acumula</p>
+                          <span style="color:rgba(24, 99, 255, 1)">$ 1,500.00</span>
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                   <li style="text-transform: uppercase;">ESMERILADORA 3M File Belt Sander 28366, 6 Hp Motor, 14-9/16</li>
+                                   <li style="text-transform: uppercase;">GÁNATE UNA MALETA DEPORTIVA</li>
+                                   <li>(Limitado a 5 piezas)</li>
                                
                             </ul>
                         </div>
                        
                     </div> <!-- single pricing -->
                 </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8 col-sm-9">
+                    <div class="single-pricing active text-center mt-30 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                        <div class="pricing-name">
+                            <h4 class="pricing-title">PROMOCIÓN 4</h4>
+                            
+                        </div>
+                        <div class="pricing-price4">
+                          <p class="text" style="color:rgba(24, 99, 255, 1)">Acumula</p>
+                          <span style="color:rgba(24, 99, 255, 1)">$ 1,500.00</span>
+                            
+                        </div>
+                         <div class="pricing-list">
+                            <ul>
+                                <li>GÁNATE UNA PLAYERA 3M</li>
+                                <li>(Limitado a 10 piezas)</li>
+                               
+                            </ul>
+                            
+                        </div>
+                       
+                        
+                    </div> <!-- single pricing -->
+                </div>
+               
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
@@ -737,7 +767,7 @@
     z-index: 2001;
    
   }
-  .pac-container {
+  .pac-container{
     background-color: #FFF;
     z-index: 2001;
     position: fixed;
@@ -752,4 +782,3 @@
   }​
   
 </style>
-    
