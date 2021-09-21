@@ -313,3 +313,21 @@ Stack trace:
 #3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
 #4 {main}
   thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[26-Aug-2021 13:05:24 America/Mexico_City] PHP Notice:  Undefined index: id in /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php on line 96
+[26-Aug-2021 13:05:25 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'usuarioAsignado' at row 561' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:177
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(177): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(104): ModeloFunciones::mdlRegistrarCompra('facturasacumula', 'FASM', '37392', NULL)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(110): ControladorFunciones::ctrRegistrarCompra('FASM', '37392', NULL)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(263): AjaxFuncionesSorteo->ajaxRegistrarCompra()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 177
+[31-Aug-2021 11:38:23 America/Mexico_City] PHP Notice:  Undefined index: id in /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php on line 96
+[31-Aug-2021 11:38:23 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:210
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(210): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(122): ModeloFunciones::mdlObtenerDatosParticipante('participantes', NULL)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(116): ControladorFunciones::ctrObtenerDatosParticipante(NULL)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(263): AjaxFuncionesSorteo->ajaxRegistrarCompra()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 210

@@ -2,7 +2,7 @@
 
 
 /**
- *
+ * 
  */
 class ControladorFunciones
 {
@@ -27,7 +27,7 @@ class ControladorFunciones
 
 		if (isset($correo)) {
 			session_start();
-
+			
 				$encriptado = $encriptar($password);
 
 				$item = "correo";
@@ -48,7 +48,7 @@ class ControladorFunciones
 
 					return "error";
 				}
-
+			
 		}
 	}
 	static public function ctrMostrarTotalBoletos($idParticipante)
