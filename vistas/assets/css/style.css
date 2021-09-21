@@ -641,13 +641,13 @@ p {
         margin-top: 0; } }
   .header-countdown .single-count-content.count-color-1 .count,
   .header-countdown .single-count-content.count-color-1 .text {
-    color: #16a6ee; }
+    color: #ffffff; }
   .header-countdown .single-count-content.count-color-2 .count,
   .header-countdown .single-count-content.count-color-2 .text {
     color: #ffc107; }
   .header-countdown .single-count-content.count-color-3 .count,
   .header-countdown .single-count-content.count-color-3 .text {
-    color: #03a9f4; }
+    color: #ffffff; }
   .header-countdown .single-count-content.count-color-4 .count,
   .header-countdown .single-count-content.count-color-4 .text {
     color: #8bc34a; }
@@ -1027,7 +1027,7 @@ p {
     color: #777777;
     margin-top: 10px; }
   .single-pricing .pricing-price1 {
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion1.png);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1045,7 +1045,7 @@ p {
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba(24, 99, 255, 0.2);
+      background-color: rgba(24, 99, 255, 0.1);
       -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -1066,14 +1066,14 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price1:hover {
 
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion1.png);
 
     opacity: 0.9;
     
   }
 
   .single-pricing .pricing-price2 {
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion2.png);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1091,7 +1091,7 @@ p {
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba(24, 99, 255, 0.2);
+      background-color: rgba(24, 99, 255, 0.1);
       -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -1112,13 +1112,13 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price2:hover {
 
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion2.png);
 
     opacity: 0.9;
     
   }
    .single-pricing .pricing-price3 {
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion3.png);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1136,7 +1136,7 @@ p {
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba(24, 99, 255, 0.2);
+      background-color: rgba(24, 99, 255, 0.1);
       -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -1157,13 +1157,13 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price3:hover {
 
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion3.png);
 
     opacity: 0.9;
     
   }
   .single-pricing .pricing-price4 {
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion2.png);
     background-position: center center;
     background-size: cover;
     position: relative;
@@ -1181,7 +1181,7 @@ p {
       height: 100%;
       top: 0;
       left: 0;
-      background-color: rgba(24, 99, 255, 0.2);
+      background-color: rgba(24, 99, 255, 0.1);
       -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -1202,7 +1202,7 @@ p {
       margin-top: 15px; }
   .single-pricing .pricing-price4:hover {
 
-    background-image: url(../images/promocion1.jpg);
+    background-image: url(../images/promocion2.png);
 
     opacity: 0.9;
     
@@ -1508,4 +1508,7 @@ p {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+.stockPremios{
+  color: red;
 }

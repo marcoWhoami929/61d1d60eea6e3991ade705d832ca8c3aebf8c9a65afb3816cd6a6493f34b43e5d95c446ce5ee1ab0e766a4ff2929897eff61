@@ -10,7 +10,8 @@
         </button>
          <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-search d-none d-lg-block">
-            <button type="button" class="btn btn-primary btn-icon-text btn-rounded" data-toggle='modal' data-target='#modalRegistrarCompra'>
+            <img class="animate__animated animate__shakeX animate__slow animate__infinite" src="vistas/assets/images/pistola.png" alt="">
+            <button type="button" class="btn btn-primary btn-icon-text btn-rounded" style="margin-top:70px" data-toggle='modal' data-target='#modalRegistrarCompra'>
             <i class="ti-clipboard btn-icon-prepend"></i>Registrar Mi Compra
             </button>
           </li>

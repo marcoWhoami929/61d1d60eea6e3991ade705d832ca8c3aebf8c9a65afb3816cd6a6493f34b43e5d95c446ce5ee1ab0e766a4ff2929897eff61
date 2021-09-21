@@ -9,7 +9,7 @@ $string="<br> Usuario:".$nombre." <br>Correo de Contacto: ".$email."<br>Telefono
 set_time_limit(0);
 ignore_user_abort(true);
 /*RECOGER VALORES ENVIADOS DESDE INDEX.PHP*/
-$email = "mm_marco_mar@hotmail.com";
+$email = "soporte@sfd.com.mx";
 $sDestino = $email;
         // Create the email and send the message
         $to = $email; // Add your email address inbetween the '' replacing yourname@yourdomain.com - Aquí es donde el formulario enviará un mensaje a.

@@ -244,7 +244,7 @@ $(function() {
 
                         //clear all fields
                         $('#formAccess').trigger("reset");
-                        setTimeout(function(){  location.href = "dashboard"}, 1000);
+                        setTimeout(function(){  location.href = "tablero"}, 1000);
 
                       }else{
 
@@ -324,37 +324,15 @@ $(function() {
                                         $('#successRegisterSale > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                                             .append("</button>");
                                         $('#successRegisterSale > .alert-success')
-                                            .append("Compra Registrada,Enviando correo electrónico de confirmación.");
+                                            .append("Compra Registrada,revise en su tablero cuanto le falta para ganar.");
                                         $('#successRegisterSale > .alert-success')
                                             .append('</div>');
-                                        
-                                        $.ajax({
-                                             url: "vistas/assets/mail/confirmBoletos.php",
-                                            type: "POST",
-                                            data: {
-                                                serieCompraSend: serieCompra,
-                                                folioCompraSend: folioCompra
-                                                
-                                            },
-                                            cache: false,
-                                            success: function(resp) {
-                                                 // Success message
-                                                    $('#successAcces').html("<div class='alert alert-success'>");
-                                                    $('#successAcces > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                                                        .append("</button>");
-                                                    $('#successAcces > .alert-success')
-                                                        .append("<strong>Correo enviado exitosamente..</strong>");
-                                                    $('#successAcces > .alert-success')
-                                                        .append('</div>');
-
-                                                    //clear all fields
-                                                    $('#formRegisterSale').trigger("reset");
-                                                    document.getElementById("btnRegister").style.display = "";
-                                                    document.getElementById("spinner").style.display = "none";
-                                                    setTimeout(function(){  location.href = "dashboard"}, 1000);
-                                               
-                                            }
-                                        });
+                                        //clear all fields
+                                        $('#formRegisterSale').trigger("reset");
+                                        document.getElementById("btnRegister").style.display = "";
+                                        document.getElementById("spinner").style.display = "none";
+                                        setTimeout(function(){  location.href = "tablero"}, 1000);
+                                       
                                       
 
                                   }else if(responseRegistro == "errorregistro"){
@@ -364,27 +342,13 @@ $(function() {
                                         $('#successRegisterSale').html("<div class='alert alert-danger'>");
                                         $('#successRegisterSale > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                                             .append("</button>");
-                                        $('#successRegisterSale > .alert-danger').append("La factura aun no pudo ser registrada, intentelo mas tarde.");
+                                        $('#successRegisterSale > .alert-danger').append("La factura aun no pudo ser registrada, porque no contiene algún producto de la marca 3M.");
                                         
                                         $('#successRegisterSale > .alert-danger').append('</div>');
 
                                         $('#formRegisterSale').trigger("reset");
                                         document.getElementById("spinner").style.display = "none";  
                                        
-
-                                  }else if(responseRegistro == "errormonto"){
-
-                                        document.getElementById("btnRegister").style.display = "";
-                                        $('#successRegisterSale').html("<div class='alert alert-danger'>");
-                                        $('#successRegisterSale > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                                            .append("</button>");
-                                        $('#successRegisterSale > .alert-danger').append("No se pudo registrar porque el monto es inferior a la compra mínima.");
-                                        
-                                        $('#successRegisterSale > .alert-danger').append('</div>');
-                                        $('#formRegisterSale').trigger("reset");
-                                        document.getElementById("spinner").style.display = "none";  
-
-                                    
 
                                   }
                                

@@ -140,6 +140,25 @@ $boletosGanados = ControladorFunciones::ctrMostrarBoletosObtenidos($idParticipan
     </div>
 
   </div>
+  <div class="modal fade" id="agradecimiento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="vistas/assets/images/agradecimiento.png">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+   
+      </div>
+    </div>
+  </div>
+</div>
 
   <style type="text/css" media="screen">
     /*  ========================
@@ -383,7 +402,13 @@ em {
     
 }
   </style>
- 
+ <script type="text/javascript">
+      window.addEventListener("load", function(){
+        setTimeout(function(){ $('#agradecimiento').modal('show'); }, 3000);
+     
+    });
+
+ </script>
   <script src="vistas/modulos/js/off-canvas.js"></script>
   <script src="vistas/modulos/js/hoverable-collapse.js"></script>
   <script src="vistas/modulos/js/template.js"></script>

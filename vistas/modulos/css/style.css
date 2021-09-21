@@ -9153,11 +9153,17 @@ pre code {
   .container {
     max-width: 540px;
   }
+  .estiloLetras{
+    margin-top:0px;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .estiloLetras{
+    margin-top:-100px;
   }
 }
 
@@ -9165,11 +9171,17 @@ pre code {
   .container {
     max-width: 960px;
   }
+   .estiloLetras{
+    margin-top:-200px;
+  }
 }
 
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  .estiloLetras{
+    margin-top:-300px;
   }
 }
 
@@ -10791,6 +10803,8 @@ textarea.form-control {
   padding: 0.875rem 1.5rem;
   font-size: 0.875rem;
   line-height: 1;
+  width: 220px;
+  height: 80px;
   border-radius: 0.1875rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -10822,8 +10836,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #248afd;
-  border-color: #248afd;
+  background-color: #A52958;
+  border-color: #A52958;
 }
 
 .btn-primary:hover {

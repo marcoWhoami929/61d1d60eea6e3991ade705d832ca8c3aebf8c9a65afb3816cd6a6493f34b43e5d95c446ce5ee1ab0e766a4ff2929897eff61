@@ -1,0 +1,315 @@
+[16-Jul-2021 17:49:56 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1044] Access denied for user 'sanfranc_matriz'@'localhost' to database 'dbname=sanfranc_rifa'' in /home/sanfranc/public_html/sorteos/modelos/conexion.php:12
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/conexion.php(12): PDO->__construct('mysql:host=loca...', 'sanfranc_matriz', 'rootWhoami929', Array)
+#1 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(70): Conexion::conectar()
+#2 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(39): ModeloFunciones::mdlMostrarAdministradores('participantes', 'correo', 'mendozamiriam27...')
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(75): ControladorFunciones::ctrIngresoAdministrador('participantes', 'mendozamiriam27...', 'mirimex27')
+#4 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(247): AjaxFuncionesSorteo->ajaxAccesoParticipante()
+#5 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/conexion.php on line 12
+[16-Jul-2021 17:49:58 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1044] Access denied for user 'sanfranc_matriz'@'localhost' to database 'dbname=sanfranc_rifa'' in /home/sanfranc/public_html/sorteos/modelos/conexion.php:12
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/conexion.php(12): PDO->__construct('mysql:host=loca...', 'sanfranc_matriz', 'rootWhoami929', Array)
+#1 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(70): Conexion::conectar()
+#2 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(39): ModeloFunciones::mdlMostrarAdministradores('participantes', 'correo', 'mendozamiriam27...')
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(75): ControladorFunciones::ctrIngresoAdministrador('participantes', 'mendozamiriam27...', 'mirimex27')
+#4 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(247): AjaxFuncionesSorteo->ajaxAccesoParticipante()
+#5 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/conexion.php on line 12
+[16-Jul-2021 17:50:17 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1044] Access denied for user 'sanfranc_matriz'@'localhost' to database 'dbname=sanfranc_rifa'' in /home/sanfranc/public_html/sorteos/modelos/conexion.php:12
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/conexion.php(12): PDO->__construct('mysql:host=loca...', 'sanfranc_matriz', 'rootWhoami929', Array)
+#1 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(70): Conexion::conectar()
+#2 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(39): ModeloFunciones::mdlMostrarAdministradores('participantes', 'correo', 'mendozamiriam27...')
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(75): ControladorFunciones::ctrIngresoAdministrador('participantes', 'mendozamiriam27...', 'mirimex27')
+#4 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(247): AjaxFuncionesSorteo->ajaxAccesoParticipante()
+#5 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/conexion.php on line 12
+[27-Jul-2021 12:01:53 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:01:56 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:01:57 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:01:58 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:01:58 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:01:59 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:02:05 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:02:11 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:02:12 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[27-Jul-2021 12:02:12 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:05 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:13 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:20 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:21 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:22 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:22 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:22 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:55:56 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:14 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:21 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:21 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:21 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:22 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:22 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:44 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:46 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:46 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:46 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:56:47 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 11:59:43 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 12:02:13 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 12:02:23 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'montoAcumuladoFacturas' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 12:04:23 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'premio1' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 12:05:09 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'premio1' doesn't have a default value' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 12:24:34 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''facturasRegistradas','premio1','premio2','premio3','premio4') values('CARLOS','' at line 1' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36
+[29-Jul-2021 12:24:40 America/Mexico_City] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''facturasRegistradas','premio1','premio2','premio3','premio4') values('CARLOS','' at line 1' in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php:36
+Stack trace:
+#0 /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php(36): PDOStatement->execute()
+#1 /home/sanfranc/public_html/sorteos/controladores/funciones.controlador.php(13): ModeloFunciones::mdlRegistrarParticipantes('participantes', Array)
+#2 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(50): ControladorFunciones::ctrRegistrarParticipantes('participantes', Array)
+#3 /home/sanfranc/public_html/sorteos/ajax/funciones.ajax.php(234): AjaxFuncionesSorteo->ajaxRegistrarParticipantes()
+#4 {main}
+  thrown in /home/sanfranc/public_html/sorteos/modelos/funciones.modelo.php on line 36

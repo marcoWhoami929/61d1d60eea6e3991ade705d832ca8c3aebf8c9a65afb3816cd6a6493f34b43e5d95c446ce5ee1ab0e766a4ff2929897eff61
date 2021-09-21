@@ -2,7 +2,7 @@
 
 
 /**
- * 
+ *
  */
 class ControladorFunciones
 {
@@ -27,10 +27,6 @@ class ControladorFunciones
 
 		if (isset($correo)) {
 			session_start();
-			if (
-				preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $correo) &&
-				preg_match('/^[a-zA-Z0-9]+$/', $password)
-			) {
 
 				$encriptado = $encriptar($password);
 
@@ -52,7 +48,7 @@ class ControladorFunciones
 
 					return "error";
 				}
-			}
+
 		}
 	}
 	static public function ctrMostrarTotalBoletos($idParticipante)
@@ -94,25 +90,25 @@ class ControladorFunciones
 	static public function ctrBuscarCompraRegistrada($serie, $folio)
 	{
 
-		$tabla = "facturas";
+		$tabla = "facturasacumula";
 
 		$respuesta = ModeloFunciones::mdlBuscarCompraRegistrada($tabla, $serie, $folio);
 
 		return $respuesta;
 	}
-	static public function ctrRegistrarCompra($serie, $folio)
+	static public function ctrRegistrarCompra($serie, $folio, $idParticipante)
 	{
 
-		$tabla = "facturas";
+		$tabla = "facturasacumula";
 
-		$respuesta = ModeloFunciones::mdlRegistrarCompra($tabla, $serie, $folio);
+		$respuesta = ModeloFunciones::mdlRegistrarCompra($tabla, $serie, $folio, $idParticipante);
 
 		return $respuesta;
 	}
 	static public function ctrObtenerDatosFactura($serie, $folio)
 	{
 
-		$tabla = "facturas";
+		$tabla = "facturasacumula";
 
 		$respuesta = ModeloFunciones::mdlObtenerDatosFactura($tabla, $serie, $folio);
 
@@ -127,12 +123,12 @@ class ControladorFunciones
 
 		return $respuesta;
 	}
-	static public function ctrActualizarParticipante($idParticipante, $comprasRegistradas, $montoAcumulado)
+	static public function ctrActualizarParticipante($idParticipante, $comprasRegistradas, $acumuladoPremio1, $acumuladoPremio2, $acumuladoPremio3, $acumuladoPremio4, $total)
 	{
 
 		$tabla = "participantes";
 
-		$respuesta = ModeloFunciones::mdlActualizarParticipante($tabla, $idParticipante, $comprasRegistradas, $montoAcumulado);
+		$respuesta = ModeloFunciones::mdlActualizarParticipante($tabla, $idParticipante, $comprasRegistradas, $acumuladoPremio1, $acumuladoPremio2, $acumuladoPremio3, $acumuladoPremio4, $total);
 
 		return $respuesta;
 	}
@@ -169,6 +165,42 @@ class ControladorFunciones
 		$tabla = "premios";
 
 		$respuesta = ModeloFunciones::mdlBuscarPremios($tabla);
+
+		return $respuesta;
+	}
+	static public function ctrNuevoGanador($idParticipante, $idFactura, $idPremio)
+	{
+
+		$tabla = "premios";
+
+		$respuesta = ModeloFunciones::mdlNuevoGanador($tabla, $idParticipante, $idFactura, $idPremio);
+
+		return $respuesta;
+	}
+	static public function ctrMostrarFacturasRegistradas($idParticipante)
+	{
+
+		$tabla = "facturasacumula";
+
+		$respuesta = ModeloFunciones::mdlMostrarFacturasRegistradas($tabla, $idParticipante);
+
+		return $respuesta;
+	}
+	static public function ctrBuscarPremiosGanados($idParticipante)
+	{
+
+		$tabla = "ganadores";
+
+		$respuesta = ModeloFunciones::mdlBuscarPremiosGanados($tabla, $idParticipante);
+
+		return $respuesta;
+	}
+	static public function ctrBuscarPremiosGanadosLista($idParticipante)
+	{
+
+		$tabla = "ganadores";
+
+		$respuesta = ModeloFunciones::mdlBuscarPremiosGanadosLista($tabla, $idParticipante);
 
 		return $respuesta;
 	}
